@@ -5,10 +5,20 @@ public class reversestring {
         Scanner scanner=new Scanner(System.in);
         System.out.println("enter the string name");
         String name = scanner.nextLine();
-        for(int i=name.length()-1 ; i>=0 ; i--){
-            System.out.println(name.charAt(i));             
+        String[]arr = name.split("");
+        String palindrome="";
+        for(int i=arr.length-1 ; i>=0 ; i--){
+            System.out.println(arr[i]);    
+            palindrome=palindrome+arr[i];         
         }
 
+            if(palindrome.equals(name)){
+                System.out.println("it is palindrome");
+            }
+            else{
+                System.out.println("it is not a palindrome");
+            }
+        
     }
     
 }
